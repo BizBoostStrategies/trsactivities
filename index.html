@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BizBoost Strategies | TRS-Aligned Activities for Texas Child Care Programs</title>
+  <meta name="description" content="ECAB delivers daily TRS-aligned classroom activities to Texas child care programs. Age-specific, teacher-ready, built to 4-Star standards. Plans from $59/month.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:#111e30;--navy-mid:#15394d;--navy-light:#1e3a52;
+      --teal:#1e7d7a;--teal-mid:#237b7b;--teal-light:#4fb8c8;
+      --teal-pale:#e8f5f5;--teal-border:#b8d8dc;
+      --amber:#e8a838;--rust:#c8553a;
+      --bg:#fafaf7;--white:#ffffff;--surface:#f0f4f5;
+      --divider:#dde5e6;--text:#183039;--text-mid:#355a61;--text-muted:#6b7b85;
+      --font-display:'DM Serif Display',Georgia,serif;
+      --font-body:'Inter','Segoe UI',sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:74px;-webkit-font-smoothing:antialiased}
+    body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6}
+    img{display:block;max-width:100%;height:auto}
+    a{transition:color .18s ease,opacity .18s ease}
+
+    .container{max-width:1100px;margin:0 auto;padding:0 28px}
+    .sec{padding:72px 0}
+    .sec-t{background:var(--surface)}
+
+    .sl{font-size:11px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:1.8px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+    .sl::after{content:'';width:36px;height:1px;background:var(--teal-border)}
+    .sh{font-family:var(--font-display);font-size:clamp(1.65rem,3vw,2.25rem);color:var(--navy-mid);line-height:1.2;margin-bottom:8px}
+    .ss{font-size:15.5px;color:var(--text-muted);max-width:580px;line-height:1.7}
+
+    /* NAVBAR */
+    .nb{position:sticky;top:0;z-index:100;background:var(--navy-mid);box-shadow:0 2px 18px rgba(0,0,0,.25)}
+    .nb-in{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:10px 28px}
+    .nb-logo{height:40px;background:white;border-radius:6px;padding:3px 6px}
+    .nb nav{display:flex;align-items:center;gap:4px}
+    .nb nav a{color:rgba(255,255,255,.72);text-decoration:none;font-weight:500;font-size:13px;padding:7px 12px;border-radius:6px}
+    .nb nav a:hover{color:#fff;background:rgba(255,255,255,.10)}
+    .nb-cta{background:linear-gradient(135deg,var(--teal),var(--teal-mid))!important;color:#fff!important;font-weight:600!important;box-shadow:0 2px 10px rgba(30,125,122,.38)!important}
+    .nb-cta:hover{opacity:.9!important}
+
+    /* HERO */
+    .hero{background:linear-gradient(150deg,var(--navy) 0%,var(--navy-mid) 50%,#1a3f56 100%);color:#fff;padding:78px 0 68px;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 88% 48%,rgba(30,125,122,.22) 0%,transparent 68%);pointer-events:none}
+    .hero-in{max-width:1100px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1fr 195px;gap:44px;align-items:center}
+    .hero-ey{font-size:11px;font-weight:700;color:var(--teal-light);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
+    .hero h1{font-family:var(--font-display);font-size:clamp(2rem,4.5vw,3rem);line-height:1.14;color:#fff;margin-bottom:16px}
+    .hero h1 span{color:var(--teal-light)}
+    .hero-sub{font-size:16px;color:rgba(255,255,255,.68);max-width:530px;line-height:1.72;margin-bottom:28px}
+    .hero-act{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:14px;padding:11px 22px;border-radius:6px;border:none;cursor:pointer;transition:opacity .18s ease,box-shadow .18s ease}
+    .btn-p{background:linear-gradient(135deg,var(--teal),var(--teal-mid));color:#fff;box-shadow:0 4px 16px rgba(30,125,122,.38)}
+    .btn-p:hover{opacity:.88}
+    .btn-g{border:1.5px solid rgba(255,255,255,.32);color:rgba(255,255,255,.82);background:transparent}
+    .btn-g:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.58);color:#fff}
+    .hb{display:flex;flex-direction:column;gap:10px}
+    .hb-it{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:13px 15px;text-align:center}
+    .hb-n{font-family:var(--font-display);font-size:28px;color:var(--amber);line-height:1}
+    .hb-l{font-size:9px;color:var(--teal-light);text-transform:uppercase;letter-spacing:1px;margin-top:4px;line-height:1.4}
+
+    /* CHALLENGE */
+    .chal{background:#fdf6f2;border-top:3px solid var(--rust);padding:26px 0}
+    .chal-in{max-width:1100px;margin:0 auto;padding:0 28px;display:flex;gap:16px;align-items:flex-start}
+    .chal-ic{width:34px;height:34px;border-radius:50%;background:var(--rust);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+    .chal-ic svg{width:17px;height:17px;fill:none;stroke:white;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .chal-tag{font-size:10px;font-weight:700;color:var(--rust);text-transform:uppercase;letter-spacing:1.4px;margin-bottom:5px}
+    .chal p{font-size:14.5px;line-height:1.68;color:var(--text-mid)}
+
+    /* SOLUTION */
+    .sol-g{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:start;margin-top:28px}
+    .fl{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:12px}
+    .fl li{font-size:14px;line-height:1.56;color:var(--text-mid);padding:10px 14px 10px 42px;position:relative;background:var(--white);border:1px solid var(--divider);border-radius:7px;box-shadow:0 1px 3px rgba(17,30,48,.05)}
+    .fl li::before{content:'';position:absolute;left:13px;top:50%;transform:translateY(-50%);width:18px;height:18px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Cpath d='M4 9l3.5 3.5L14 6' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat}
+    .fl li strong{color:var(--text);font-weight:600}
+    .age-card{background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:14px;padding:18px}
+    .act{font-size:10px;font-weight:700;color:var(--navy-mid);text-transform:uppercase;letter-spacing:1px;text-align:center;margin-bottom:11px;padding-bottom:10px;border-bottom:1px solid var(--teal-border)}
+    .ai{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid rgba(184,216,220,.4)}
+    .ai:last-child{border-bottom:none}
+    .ad{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+    .d1{background:#1a7a6e}.d2{background:#237b7b}.d3{background:var(--amber)}.d4{background:var(--rust)}
+    .an{font-size:14px;font-weight:600;color:var(--text)}
+    .ar{font-size:12px;color:var(--text-muted);margin-left:auto}
+    .sb{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);border-radius:10px;padding:14px;margin-top:11px;text-align:center}
+    .stars{font-size:17px;color:#e8a838 !important;letter-spacing:4px}
+    .st{font-size:11.5px;color:rgba(255,255,255,.5);margin-top:5px;line-height:1.5}
+    .st strong{color:var(--teal-light)}
+    .themes{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}
+    .tc{background:var(--white);border:1px solid var(--divider);border-radius:20px;padding:5px 14px;font-size:12.5px;color:var(--text-mid);font-weight:500}
+
+    /* TRS */
+    .trs-box{background:var(--white);border:1px solid var(--teal-border);border-radius:14px;padding:26px 30px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;box-shadow:0 4px 18px rgba(17,30,48,.08)}
+    .trs-box p{font-size:15px;line-height:1.7;color:var(--text-mid);margin-top:8px}
+    .trs-box p strong{color:var(--text);font-weight:600}
+    .c2b{background:linear-gradient(135deg,var(--teal),var(--teal-mid));border-radius:10px;padding:18px 20px;text-align:center;flex-shrink:0;min-width:105px;box-shadow:0 6px 20px rgba(30,125,122,.28)}
+    .c2l{font-size:9px;color:rgba(255,255,255,.58);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+    .c2p{font-family:var(--font-display);font-size:46px;color:#fff;line-height:1}
+    .c2s{font-size:9px;color:rgba(255,255,255,.56);margin-top:4px}
+
+    /* HOW */
+    .how-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+    .step{background:var(--white);border:1px solid var(--divider);border-radius:13px;padding:26px 20px;text-align:center;box-shadow:0 2px 8px rgba(17,30,48,.06);position:relative}
+    .step:not(:last-child)::after{content:'›';position:absolute;right:-12px;top:50%;transform:translateY(-50%);font-size:22px;color:var(--teal);font-weight:700;z-index:1}
+    .si{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--teal-pale),#d4eef0);border:1px solid var(--teal-border);display:inline-flex;align-items:center;justify-content:center;margin:0 auto 13px}
+    .si svg{width:20px;height:20px;stroke:var(--teal);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .step h3{font-size:14.5px;font-weight:700;color:var(--text);margin-bottom:7px}
+    .step p{font-size:13px;color:var(--text-muted);line-height:1.56}
+
+    /* PRICING */
+    .pr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+    .pc{background:var(--white);border:1px solid var(--divider);border-radius:13px;padding:24px 18px 20px;text-align:center;position:relative;box-shadow:0 2px 8px rgba(17,30,48,.06);transition:box-shadow .2s ease}
+    .pc:hover{box-shadow:0 6px 22px rgba(17,30,48,.11)}
+    .pc-f{border-color:var(--teal);background:#f0fafa;box-shadow:0 4px 18px rgba(30,125,122,.13)}
+    .pb{position:absolute;top:-1px;right:12px;background:linear-gradient(135deg,var(--teal),var(--teal-mid));color:#fff;font-size:9px;font-weight:700;padding:3px 9px;border-radius:0 0 7px 7px;text-transform:uppercase;letter-spacing:.6px}
+    .pa{font-family:var(--font-display);font-size:40px;color:var(--teal);line-height:1;margin-bottom:2px}
+    .pp{font-size:12.5px;color:var(--text-muted)}
+    .pt{font-size:14.5px;font-weight:700;color:var(--text);margin:9px 0 5px}
+    .pn{font-size:12px;color:var(--text-muted);line-height:1.58;padding-top:9px;border-top:1px solid var(--divider)}
+    .pv{font-size:11.5px;color:var(--teal);font-weight:600;margin-top:8px}
+    .pf{font-family:var(--font-display);font-size:22px;color:var(--text-muted);line-height:1;margin-bottom:2px}
+
+    /* FORM SECTION */
+    .fs{background:var(--navy-mid);padding:70px 0}
+    .fi{max-width:1100px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;align-items:start}
+    .fi .sl{color:var(--teal-light)}
+    .fi .sl::after{background:rgba(79,184,200,.3)}
+    .fi .sh{color:#fff}
+    .fi .ss{color:rgba(255,255,255,.60);margin-top:8px}
+    .ff{margin-top:26px;display:flex;flex-direction:column;gap:14px}
+    .ff-it{display:flex;align-items:flex-start;gap:12px}
+    .ff-ic{width:30px;height:30px;border-radius:50%;flex-shrink:0;background:rgba(79,184,200,.14);border:1px solid rgba(79,184,200,.24);display:flex;align-items:center;justify-content:center}
+    .ff-ic svg{width:14px;height:14px;stroke:var(--teal-light);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .ff-tx strong{display:block;font-size:13px;font-weight:600;color:rgba(255,255,255,.88);margin-bottom:2px}
+    .ff-tx span{font-size:12px;color:rgba(255,255,255,.46);line-height:1.5}
+    .fw{width:100%;height:870px;overflow:hidden;position:relative;border:1.5px solid rgba(79,184,200,.28);border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.28);background:var(--white)}
+    .fw iframe{position:absolute;top:0;left:0;width:100%;height:1120px;border:none}
+    .fsec{margin-top:9px;font-size:11.5px;color:rgba(255,255,255,.38);display:flex;align-items:center;gap:6px;justify-content:center}
+    .fsec svg{width:12px;height:12px;stroke:rgba(255,255,255,.38);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+    /* ABOUT */
+    .ab-in{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+    .ab-card{background:var(--white);border:1px solid var(--divider);border-radius:13px;padding:26px;box-shadow:0 2px 10px rgba(17,30,48,.06)}
+    .ab-card p{font-size:15px;color:var(--text-mid);line-height:1.72}
+    .cb{background:var(--teal-pale);border:1px solid var(--teal-border);border-radius:12px;padding:22px;text-align:center;margin-top:18px}
+    .cb h4{font-size:13.5px;font-weight:700;color:var(--teal);margin-bottom:6px}
+    .cb p{font-size:12.5px;color:var(--text-muted);line-height:1.55;margin-bottom:13px}
+    .cb a{display:inline-block;background:var(--teal);color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 18px;border-radius:6px;transition:background .18s ease}
+    .cb a:hover{background:var(--teal-mid)}
+    .ab-stats{display:flex;flex-direction:column;gap:14px}
+    .si2{background:var(--white);border:1px solid var(--divider);border-radius:10px;padding:16px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 1px 4px rgba(17,30,48,.05)}
+    .si2-n{font-family:var(--font-display);font-size:30px;color:var(--teal);line-height:1;min-width:56px}
+    .si2-l{font-size:12.5px;color:var(--text-muted);line-height:1.5}
+
+    /* FOOTER */
+    .foot{background:var(--navy);padding:30px 0}
+    .foot-in{max-width:1100px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+    .fd{font-size:10.5px;line-height:1.62;color:rgba(255,255,255,.30);max-width:58%}
+    .fb{text-align:right;flex-shrink:0}
+    .fb strong{display:block;font-size:13px;color:#fff;margin-bottom:4px}
+    .fb a{font-size:12px;color:var(--teal-light);text-decoration:none;display:block;line-height:1.85}
+    .fb a:hover{text-decoration:underline}
+    .fc{font-size:10px;color:rgba(255,255,255,.22);margin-top:6px}
+
+    /* RESPONSIVE */
+    @media(max-width:920px){
+      .hero-in{grid-template-columns:1fr}.hb{flex-direction:row}
+      .sol-g{grid-template-columns:1fr}.trs-box{grid-template-columns:1fr}
+      .fi{grid-template-columns:1fr}.ab-in{grid-template-columns:1fr}
+      .foot-in{flex-direction:column;gap:18px}.fd{max-width:100%}.fb{text-align:left}
+    }
+    @media(max-width:700px){
+      .how-g{grid-template-columns:1fr}.pr-g{grid-template-columns:1fr}
+      .step:not(:last-child)::after{display:none}
+      .hero{padding:50px 0 44px}.sec{padding:46px 0}
+      .fw{height:820px}.fw iframe{height:1060px}
+      .nb nav a:not(.nb-cta){display:none}
+    }
+    @media(max-width:480px){
+      .hero h1{font-size:1.82rem}.container,.hero-in,.fi,.foot-in{padding-left:16px;padding-right:16px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="nb">
+  <div class="nb-in">
+<a href="#"><img class="nb-logo" src="logo.png" alt="BizBoost Strategies" height="40" loading="eager"></a>
+    <nav>
+      <a href="#ecab">ECAB</a>
+      <a href="#how">How It Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#get-started" class="nb-cta">Get Free Sample</a>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-in">
+    <div>
+      <div class="hero-ey"><h1><span>ECAB — Early Childhood Activity Booster</span></h1></div>
+      <h2>Daily TRS-Aligned Activities &mdash; Delivered Every Weekday</span></h2>
+      <p class="hero-sub">Practical, classroom-ready activities for Texas Rising Star programs. Age-specific, teacher-ready, built to 4-Star certification standards &mdash; delivered straight to your inbox.</p>
+      <div class="hero-act">
+        <a href="#get-started" class="btn btn-p">Get Free Sample Activities</a>
+        <a href="#pricing" class="btn btn-g">View Pricing</a>
+      </div>
+    </div>
+    <div class="hb">
+      <div class="hb-it">
+        <div class="hb-n">40%</div>
+        <div class="hb-l">of TRS Score<br>Category 2</div>
+      </div>
+      <div class="hb-it">
+        <div class="hb-n">4</div>
+        <div class="hb-l">Age Groups<br>Served</div>
+      </div>
+      <div class="hb-it">
+        <div class="hb-n" style="color:#e8a838;">&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="hb-l">4-Star<br>Standard</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHALLENGE BAR -->
+<div class="chal">
+  <div class="chal-in">
+    <div class="chal-ic">
+      <svg viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+    </div>
+    <div>
+      <div class="chal-tag">Director&rsquo;s Daily Challenge</div>
+      <p>Child care directors managing TRS certification face a persistent gap: translating assessment standards into daily classroom activities. Teachers need ready-to-use, age-specific resources that directly support the practices TRS assessors evaluate &mdash; but creating these materials in-house requires expertise most programs don&rsquo;t have on staff.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SOLUTION -->
+<section id="ecab" class="sec">
+  <div class="container">
+    <div class="sl">ECAB Solution</div>
+    <h2 class="sh">Everything Your Teachers Need,<br>Ready Before Class Starts</h2>
+    <div class="sol-g">
+      <div>
+        <p class="ss">ECAB delivers practical, classroom-ready activities aligned with Texas Rising Star assessment standards. Each activity is designed to be immediately usable:</p>
+        <ul class="fl">
+          <li><strong>Age-Specific</strong> &mdash; Designed for each developmental stage with appropriate complexity, materials, and teaching strategies</li>
+          <li><strong>Standards-Aligned</strong> &mdash; Mapped to TRS Classroom Assessment categories with primary and secondary indicator coverage</li>
+          <li><strong>Teacher-Friendly</strong> &mdash; Step-by-step teaching scripts, materials lists, safety notes, and portfolio documentation guidance</li>
+          <li><strong>4-Star Standard</strong> &mdash; All activities developed to meet the highest TRS certification level, supporting quality improvement at every stage</li>
+        </ul>
+        <div class="themes">
+          <div class="tc">&#128300; STEM</div>
+          <div class="tc">&#127912; Creative Arts</div>
+          <div class="tc">&#128155; Social-Emotional</div>
+          <div class="tc">&#128214; Language &amp; Literacy</div>
+          <div class="tc">&#127939; Physical Development</div>
+          <div class="tc">&#127807; Life Skills</div>
+        </div>
+      </div>
+      <div>
+        <div class="age-card">
+          <div class="act">Age Groups Served</div>
+          <div class="ai"><div class="ad d1"></div><span class="an">Infant</span><span class="ar">0&ndash;17 months</span></div>
+          <div class="ai"><div class="ad d2"></div><span class="an">Toddler</span><span class="ar">18&ndash;35 months</span></div>
+          <div class="ai"><div class="ad d3"></div><span class="an">Pre-K</span><span class="ar">3&ndash;5 years</span></div>
+          <div class="ai"><div class="ad d4"></div><span class="an">School-Age</span><span class="ar">5&ndash;12 years</span></div>
+        </div>
+        <div class="sb">
+          <div class="stars">&#9733; &#9733; &#9733; &#9733;</div>
+          <div class="st">All activities designed to<br><strong>4-Star Certification Standards</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRS ALIGNMENT -->
+<section class="sec sec-t">
+  <div class="container">
+    <div class="sl">TRS Assessment Alignment</div>
+    <div class="trs-box">
+      <div>
+        <h3 style="font-family:var(--font-display);font-size:1.35rem;color:var(--navy-mid);margin-bottom:8px;">Targeting What Moves Your Score</h3>
+        <p>Activities are developed using publicly available TRS assessment standards and evidence-based early childhood education practices. Coverage spans all four TRS assessment categories, with particular depth in <strong>Category 2: Teacher-Child Interactions</strong> &mdash; weighted at 40% of the overall TRS score.</p>
+      </div>
+      <div class="c2b">
+        <div class="c2l">Category 2</div>
+        <div class="c2p">40%</div>
+        <div class="c2s">of TRS Score</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="sec">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="sl" style="justify-content:center;">How It Works</div>
+      <h2 class="sh" style="text-align:center;">Up and Running in Minutes</h2>
+    </div>
+    <div class="how-g">
+      <div class="step">
+        <div class="si"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg></div>
+        <h3>1. Sign Up</h3>
+        <p>Enroll online in minutes &mdash; select your age groups and activate your center</p>
+      </div>
+      <div class="step">
+        <div class="si"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+        <h3>2. Receive</h3>
+        <p>Activities delivered to your inbox every weekday morning, ready for your teachers</p>
+      </div>
+      <div class="step">
+        <div class="si"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <h3>3. Implement</h3>
+        <p>Teachers follow step-by-step scripts; built-in documentation supports quality improvement</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- MISSION -->
+<section class="sec" style="background:#f7fbfb;border-top:1px solid #dde5e6;border-bottom:1px solid #dde5e6;">
+  <div class="container">
+    <div style="max-width:720px;margin:0 auto;text-align:center;">
+      <div class="sl" style="justify-content:center;">Our Mission</div>
+      <h2 class="sh" style="text-align:center;">Why We Built This</h2>
+      <p style="font-size:1.08rem;color:#355a61;line-height:1.82;margin-top:20px;">
+        ECAB believes every child &mdash; in every classroom, in every community &mdash; deserves access to high-quality, developmentally appropriate activities. We build automated systems that make that access real for the childcare teachers who serve them, wherever they are, whatever the budget. Because cost should never be the reason a child goes without quality support.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="sec sec-t">
+  <div class="container">
+    <div class="sl">Pricing</div>
+    <h2 class="sh">Simple, Transparent Pricing</h2>
+    <p class="ss" style="margin-top:6px;">No contracts. No surprises. Cancel anytime.</p>
+    <div class="pr-g">
+      <div class="pc">
+        <div class="pa">$59</div>
+        <div class="pp">/month</div>
+        <div class="pt">Small Center</div>
+        <div class="pn">Up to 40 licensed children<br>All 4 age tracks &middot; Daily delivery</div>
+        <div class="pv">&#8776;&nbsp;$1.47/day for your whole center</div>
+      </div>
+      <div class="pc pc-f">
+        <div class="pb">Most Popular</div>
+        <div class="pa">$199</div>
+        <div class="pp">/month</div>
+        <div class="pt">Large Center</div>
+        <div class="pn">41+ licensed children<br>All 4 age tracks &middot; Daily delivery</div>
+        <div class="pv">&#8776;&nbsp;$4.98/day, any size center</div>
+      </div>
+      <div class="pc">
+        <div class="pf">FREE</div>
+        <div class="pp">&nbsp;</div>
+        <div class="pt">Try It Free</div>
+        <div class="pn">No commitment required<br>Sample pack &middot; Four age groups Activities </div>
+        <div class="pv">No credit card needed</div>
+      </div>
+    </div>
+  </div>
+  <!-- COMMUNITY ACCESS PROGRAM -->
+<div style="margin-top:32px;padding:24px 28px;background:#f0fafa;border:1px solid #b8d8dc;border-radius:12px;text-align:center;max-width:680px;margin-left:auto;margin-right:auto;">
+  <p style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:#1e7d7a;margin-bottom:10px;">Community Access Program</p>
+  <p style="font-size:15px;color:#355a61;line-height:1.75;margin-bottom:14px;">
+    If most of the families you serve rely on childcare assistance or subsidy vouchers to keep their children enrolled, we want to hear from you. Regardless of your location or program size, cost should not be the reason your teachers and children go without quality support.
+  </p>
+  <p style="font-size:15px;color:#355a61;line-height:1.75;">
+    Reach out and tell us about your program &mdash; we listen before we make any decisions.<br>
+    <a href="mailto:support@getecab.com?subject=Community Access Program" style="color:#1e7d7a;font-weight:700;text-decoration:none;font-size:15.5px;">support@getecab.com</a>
+  </p>
+</div>
+</section>
+
+<!-- GET STARTED / FORM -->
+<section id="get-started" class="fs">
+  <div class="fi">
+    <div>
+      <div class="sl">Get Started Free</div>
+      <h2 class="sh">Request a Free Sample Activity</h2>
+      <p class="ss">See how our TRS-aligned activities can support your program. No commitment required.</p>
+      <div class="ff">
+        <div class="ff-it">
+          <div class="ff-ic"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div class="ff-tx"><strong>Instant delivery</strong><span>Sample activity sent within 24 hours</span></div>
+        </div>
+        <div class="ff-it">
+          <div class="ff-ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+          <div class="ff-tx"><strong>Customized for your center</strong><span>Activities for all 4 age groups, ready for every classroom</span></div>
+        </div>
+        <div class="ff-it">
+          <div class="ff-ic"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+          <div class="ff-tx"><strong>Zero obligation</strong><span>No credit card, no contract, no pressure</span></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="fw">
+        <iframe src="https://forms.microsoft.com/Pages/ResponsePage.aspx?id=0B9nViGDiE-Y12MAyO4F9a0_tKq4NI9Kn4miM1YhotFUOEhCNjZQOU0xWk9FVUIwSFlGMEJDV05PWS4u&embed=true"
+          frameborder="0" marginwidth="0" marginheight="0"
+          style="border:none;max-width:100%;max-height:100vh"
+          allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen
+          title="Request a Free Sample Activity"></iframe>
+      </div>
+      <div class="fsec">
+        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        Your information is secure and will never be shared.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="sec">
+  <div class="container">
+    <div class="ab-in">
+      <div>
+        <div class="sl">About BizBoost Strategies</div>
+        <h2 class="sh">Texas-Based.<br>Early Childhood Focused.</h2>
+        <div class="ab-card" style="margin-top:18px">
+          <p>BizBoost Strategies is a Texas-based quality improvement resource company. We develop practical, classroom-ready materials designed to support child care programs participating in the Texas Rising Star program. Our activities are developed using publicly available TRS assessment standards and evidence-based early childhood education practices. Activity content is AI-assisted with professional review. ECAB is an automated digital service — not a consulting service, official TRS curriculum, or program affiliated with the Texas Workforce Commission or the Texas Rising Star program.</p>
+        </div>
+        <div class="cb">
+          <h4>&#128172; Have Other Questions?</h4>
+          <p>For consultation-related inquiries, reach out to our team directly. We typically respond within 48 hours.</p>
+          <a href="mailto:support@getecab.com">support@getecab.com</a>
+        </div>
+      </div>
+      <div class="ab-stats">
+        <div class="si2"><div class="si2-n">4</div><div class="si2-l">Age groups served &mdash; Infant, Toddler, Pre-K, School-Age</div></div>
+        <div class="si2"><div class="si2-n">6</div><div class="si2-l">Learning themes in rotation &mdash; STEM, Creative, SEL, Language, Physical, Life Skills</div></div>
+        <div class="si2"><div class="si2-n">40%</div><div class="si2-l">of TRS score covered by Category 2: Teacher-Child Interactions</div></div>
+        <div class="si2"><div class="si2-n">5&times;</div><div class="si2-l">Weekly delivery &mdash; every weekday morning, year-round</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- PRIVACY POLICY SECTION — bizboostrategy.com        -->
+<!-- Last updated: April 2026                           -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="privacy-policy" style="background:#f0f4f5;border-top:1px solid #dde5e6;padding:64px 0;">
+  <div class="container" style="max-width:760px;">
+    <div class="sl">Legal</div>
+    <h2 class="sh" style="margin-bottom:6px;">Privacy Policy</h2>
+    <p style="font-size:12px;color:#6b7b85;margin-bottom:36px;">BizBoost Strategies &nbsp;|&nbsp; Last updated: April 2026 &nbsp;|&nbsp; Effective: April 11, 2026</p>
+
+    <!-- Opening statement -->
+    <div style="background:#fff;border:1px solid #b8d8dc;border-radius:12px;padding:22px 26px;margin-bottom:28px;">
+      <p style="font-size:15px;font-weight:600;color:#111e30;margin-bottom:6px;">We don't sell your data. Ever.</p>
+      <p style="font-size:14.5px;color:#355a61;line-height:1.72;">You trusted us with your information. Here is exactly what we collect, why we collect it, and what we do with it. If you have any questions, email us directly at <a href="mailto:support@getecab.com" style="color:#1e7d7a;font-weight:500;">support@getecab.com</a>.</p>
+    </div>
+
+    <!-- Section 1 -->
+    <div style="margin-bottom:28px;">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;color:#111e30;margin-bottom:10px;">1. Who We Are</h3>
+      <p style="font-size:14.5px;color:#355a61;line-height:1.72;">ECAB (Early Childhood Activity Booster) is a service developed and operated by BizBoost Strategies, a Texas-based quality improvement resource company, available at <a href="https://www.trsactivities.com" style="color:#1e7d7a;">www.trsactivities.com</a>. National availability is planned at <a href="https://www.getecab.com" style="color:#1e7d7a;">www.getecab.com</a>. We are subject to the Texas Data Privacy and Security Act (TDPSA). We are not affiliated with the Texas Workforce Commission, Texas Rising Star, or any Texas state agency. Our service is designed for licensed childcare programs participating in the Texas Rising Star (TRS) program. Directors from other states are welcome to use our service; however, our activities are specifically developed to align with Texas TRS assessment standards and may not align with other states’ quality rating systems.</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div style="margin-bottom:28px;">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;color:#111e30;margin-bottom:10px;">2. What We Collect and Why</h3>
+      <div style="display:grid;gap:10px;">
+
+        <div style="background:#fff;border:1px solid #dde5e6;border-radius:8px;padding:16px 18px;">
+          <p style="font-size:13px;font-weight:700;color:#111e30;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;">Website Analytics</p>
+          <p style="font-size:14px;color:#355a61;line-height:1.68;"><strong>What:</strong> Pages visited, time on site, general geographic region, scroll and click behavior.<br>
+          <strong>How:</strong> Google Analytics 4 (GA4) with IP anonymization enabled by default.<br>
+          <strong>Why:</strong> To understand how visitors use our site and improve our content.<br>
+          <strong>What we do NOT collect:</strong> Names, email addresses, or any personally identifiable information through analytics.</p>
+        </div>
+
+        <div style="background:#fff;border:1px solid #dde5e6;border-radius:8px;padding:16px 18px;">
+          <p style="font-size:13px;font-weight:700;color:#111e30;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;">Free Sample Requests &amp; Onboarding Forms</p>
+          <p style="font-size:14px;color:#355a61;line-height:1.68;"><strong>What:</strong> Name, email address, childcare center name, licensed capacity, and selected age groups. Forms are hosted by Microsoft Forms.<br>
+          <strong>Why:</strong> To deliver your requested sample activities and, if you subscribe, to configure and deliver your daily activity emails.<br>
+          <strong>Stored where:</strong> Secure Microsoft 365 Business cloud storage (OneDrive/Azure) with AES-256 encryption at rest. Data is not accessible to third parties.</p>
+        </div>
+
+        <div style="background:#fff;border:1px solid #dde5e6;border-radius:8px;padding:16px 18px;">
+          <p style="font-size:13px;font-weight:700;color:#111e30;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;">Subscription &amp; Payment Data</p>
+          <p style="font-size:14px;color:#355a61;line-height:1.68;"><strong>What:</strong> Subscription status, subscription ID, and the email address associated with your Stripe account.<br>
+          <strong>How:</strong> Processed by Stripe. We do not store, access, or control your payment card data — Stripe is the data controller for all payment information. See <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" style="color:#1e7d7a;">stripe.com/privacy</a>.<br>
+          <strong>What we store:</strong> Only subscription status and your email, used solely to manage your active service.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div style="margin-bottom:28px;">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;color:#111e30;margin-bottom:10px;">3. How We Use Your Information</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;">
+        <li style="font-size:14.5px;color:#355a61;line-height:1.6;padding-left:22px;position:relative;"><span style="position:absolute;left:0;color:#1e7d7a;font-weight:700;">&#10003;</span> Deliver your requested sample activities and daily subscription content</li>
+        <li style="font-size:14.5px;color:#355a61;line-height:1.6;padding-left:22px;position:relative;"><span style="position:absolute;left:0;color:#1e7d7a;font-weight:700;">&#10003;</span> Manage your subscription, billing, and service access</li>
+        <li style="font-size:14.5px;color:#355a61;line-height:1.6;padding-left:22px;position:relative;"><span style="position:absolute;left:0;color:#1e7d7a;font-weight:700;">&#10003;</span> Respond to your questions and support requests</li>
+        <li style="font-size:14.5px;color:#355a61;line-height:1.6;padding-left:22px;position:relative;"><span style="position:absolute;left:0;color:#1e7d7a;font-weight:700;">&#10003;</span> Improve our website and service quality</li>
+        <li style="font-size:14.5px;color:#355a61;line-height:1.6;padding-left:22px;position:relative;"><span style="position:absolute;left:0;color:#1e7d7a;font-weight:700;">&#10007;</span><span style="color:#c8553a;"> We do not sell, rent, or share your personal information with third parties for marketing purposes</span></li>
+      </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div style="margin-bottom:28px;">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;color:#111e30;margin-bottom:10px;">4. Email Communications</h3>
+      <p style="font-size:14.5px;color:#355a61;line-height:1.72;">Emails are sent from <strong>support@getecab.com</strong> via Microsoft Azure. You will receive emails only in connection with services you have explicitly requested. To stop receiving emails from BizBoost Strategies at any time, simply reply to any email with <strong>"UNSUBSCRIBE"</strong> in the subject line or body, and we will remove you within 5 business days and confirm deletion by reply.</p>
+    </div>
+
+    <!-- Section 5 -->
+    <div style="margin-bottom:28px;">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;color:#111e30;margin-bottom:10px;">5. Third-Party Services</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div style="background:#fff;border:1px solid #dde5e6;border-radius:8px;padding:14px 16px;">
+          <p style="font-size:13px;font-weight:700;color:#111e30;margin-bottom:4px;">Google Analytics</p>
+          <p style="font-size:13px;color:#6b7b85;line-height:1.6;"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:#1e7d7a;">google.com/privacy</a></p>
+        </div>
+        <div style="background:#fff;border:1px solid #dde5e6;border-radius:8px;padding:14px 16px;">
+          <p style="font-size:13px;font-weight:700;color:#111e30;margin-bottom:4px;">Microsoft Forms &amp; Azure</p>
+          <p style="font-size:13px;color:#6b7b85;line-height:1.6;"><a href="https://privacy.microsoft.com" target="_blank" rel="noopener noreferrer" style="color:#1e7d7a;">privacy.microsoft.com</a></p>
+        </div>
+        <div style="background:#fff;border:1px solid #dde5e6;border-radius:8px;padding:14px 16px;">
+          <p style="font-size:13px;font-weight:700;color:#111e30;margin-bottom:4px;">Stripe (Payments)</p>
+          <p style="font-size:13px;color:#6b7b85;line-height:1.6;"><a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" style="color:#1e7d7a;">stripe.com/privacy</a></p>
+        </div>
+        <div style="background:#fff;border:1px solid #dde5e6;border-radius:8px;padding:14px 16px;">
+          <p style="font-size:13px;font-weight:700;color:#111e30;margin-bottom:4px;">Meta (Facebook Ads)</p>
+          <p style="font-size:13px;color:#6b7b85;line-height:1.6;"><a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener noreferrer" style="color:#1e7d7a;">facebook.com/privacy/policy</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div style="margin-bottom:28px;">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;color:#111e30;margin-bottom:10px;">6. Data Retention &amp; Deletion</h3>
+      <p style="font-size:14.5px;color:#355a61;line-height:1.72;">Your data is retained while your subscription is active and for a reasonable period after cancellation to fulfill any outstanding service obligations. You may request deletion of all personal data we hold about you at any time by emailing <a href="mailto:support@getecab.com" style="color:#1e7d7a;font-weight:500;">support@getecab.com</a>. We will confirm deletion within 30 days, and often sooner. If a billing cycle begins after your deletion request is received, we will refund that current month's charge. Past subscription charges are non-refundable.</p>
+    </div>
+
+    <!-- Section 7 -->
+    <div style="margin-bottom:28px;">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;color:#111e30;margin-bottom:10px;">7. Data Security</h3>
+      <p style="font-size:14.5px;color:#355a61;line-height:1.72;">Your data is stored in Microsoft 365 Business cloud infrastructure (OneDrive/Azure) with AES-256 encryption at rest and TLS encryption in transit. We operate within Microsoft's enterprise compliance framework. In the unlikely event of a data breach affecting your personal information, we will notify you as soon as reasonably practicable.</p>
+    </div>
+
+    <!-- Section 8 -->
+    <div style="margin-bottom:28px;">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;color:#111e30;margin-bottom:10px;">8. Your Rights (Texas TDPSA)</h3>
+      <p style="font-size:14.5px;color:#355a61;line-height:1.72;margin-bottom:10px;">Under the Texas Data Privacy and Security Act, Texas residents have the right to:</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+        <li style="font-size:14px;color:#355a61;line-height:1.6;padding-left:22px;position:relative;"><span style="position:absolute;left:0;color:#1e7d7a;">&#8594;</span> Know what personal data we collect about you</li>
+        <li style="font-size:14px;color:#355a61;line-height:1.6;padding-left:22px;position:relative;"><span style="position:absolute;left:0;color:#1e7d7a;">&#8594;</span> Request access to or a copy of your personal data</li>
+        <li style="font-size:14px;color:#355a61;line-height:1.6;padding-left:22px;position:relative;"><span style="position:absolute;left:0;color:#1e7d7a;">&#8594;</span> Request correction of inaccurate personal data</li>
+        <li style="font-size:14px;color:#355a61;line-height:1.6;padding-left:22px;position:relative;"><span style="position:absolute;left:0;color:#1e7d7a;">&#8594;</span> Request deletion of your personal data</li>
+        <li style="font-size:14px;color:#355a61;line-height:1.6;padding-left:22px;position:relative;"><span style="position:absolute;left:0;color:#1e7d7a;">&#8594;</span> Opt out of the sale of your personal data (we do not sell data)</li>
+      </ul>
+      <p style="font-size:14px;color:#6b7b85;margin-top:12px;line-height:1.68;">To exercise any of these rights, contact us at <a href="mailto:support@getecab.com" style="color:#1e7d7a;font-weight:500;">support@getecab.com</a>. We will respond within 5 business days.</p>
+      <p style="font-size:14px;color:#6b7b85;margin-top:10px;line-height:1.68;"><strong>California Residents:</strong> If you are a California resident, you have the right to opt out of the sale of your personal information under the California Consumer Privacy Act (CCPA). BizBoost Strategies does not sell personal information. To exercise any CCPA rights, contact us at <a href="mailto:support@getecab.com" style="color:#1e7d7a;">support@getecab.com</a>.</p>
+    </div>
+
+    <!-- Section 9 -->
+    <div style="margin-bottom:28px;">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;color:#111e30;margin-bottom:10px;">9. Children's Privacy</h3>
+      <p style="font-size:14.5px;color:#355a61;line-height:1.72;">Our service is directed at licensed childcare center directors and operators — adults operating professional childcare businesses. We do not knowingly collect personal data from individuals under age 18. We collect no data directly from children in care.</p>
+    </div>
+
+    <!-- Section 10 -->
+    <div style="margin-bottom:10px;">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;color:#111e30;margin-bottom:10px;">10. Contact &amp; Updates</h3>
+      <p style="font-size:14.5px;color:#355a61;line-height:1.72;">This policy may be updated periodically. The "Last updated" date at the top of this page will reflect any changes. For questions about this policy, contact us at <a href="mailto:support@getecab.com" style="color:#1e7d7a;font-weight:500;">support@getecab.com</a>.</p>
+    <!-- Section 11 -->
+    <div style="margin-bottom:10px;">
+      <h3 style="font-family:var(--font-display);font-size:1.15rem;color:#111e30;margin-bottom:10px;">11. Governing Law &amp; Jurisdiction</h3>
+      <p style="font-size:14.5px;color:#355a61;line-height:1.72;">This Privacy Policy and any disputes arising from it are governed by the laws of the State of Texas, without regard to conflict of law principles. By using our service, users in all states agree that any legal disputes will be resolved under Texas law in the courts of Texas. This policy is written to comply with the Texas Data Privacy and Security Act (TDPSA). Users in other states may have additional rights under their state’s laws; we will honor reasonable requests consistent with applicable law.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer id="contact" class="foot">
+  <div class="foot-in">
+    <div class="fd">
+      Disclaimer: ECAB is a service of BizBoost Strategies, an independent resource provider and is not affiliated with, endorsed by, or partnered with the Texas Workforce Commission, Texas Rising Star, or any Texas state agency. Activities are developed using publicly available TRS assessment standards and AI-assisted content generation with professional review. Our resources are designed to support programs in their quality improvement efforts but do not guarantee specific assessment outcomes or certification results. Centers should review all activities for appropriateness and consult with their TRS mentor or specialist as needed.
+    </div>
+    <div class="fb">
+      <strong>ECAB — Early Childhood Activity Booster</strong>
+      
+      <a href="mailto:support@getecab.com">support@getecab.com</a>
+      <div class="fc">&copy; 2026 BizBoost Strategies. All rights reserved. &nbsp;<span style="color:rgba(255,255,255,.2);">|</span>&nbsp; <a href="#privacy-policy" style="color:rgba(79,184,200,.65);text-decoration:none;font-size:12px;transition:color .18s ease;" onmouseover="this.style.color='rgba(79,184,200,1)'" onmouseout="this.style.color='rgba(79,184,200,.65)'">Privacy Policy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    const logo=document.querySelector('.nb-logo');
+    if(logo){logo.onerror=function(){this.style.display='none';this.nextElementSibling.style.display='block'}}
+  })();
+</script>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- COOKIE CONSENT BANNER — BizBoost Strategies        -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--navy);color:rgba(255,255,255,.82);font-family:var(--font-body);font-size:13px;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;box-shadow:0 -2px 20px rgba(0,0,0,.35);border-top:1px solid rgba(79,184,200,.25);">
+  <span style="max-width:700px;line-height:1.6;">This site uses Google Analytics to understand how visitors engage with our content. No personally identifiable information is collected through analytics. <a href="#privacy-policy" style="color:var(--teal-light);text-decoration:underline;font-weight:500;" onclick="document.getElementById('cookie-banner').style.display='none';">View Privacy Policy</a></span>
+  <button onclick="document.getElementById('cookie-banner').style.display='none';window._cookieOk=true;" style="background:var(--teal);color:#fff;border:none;padding:9px 20px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0;">Got it</button>
+</div>
+<script>
+  (function(){
+    if(!window._cookieOk){
+      var b=document.getElementById('cookie-banner');
+      if(b)b.style.display='flex';
+    }
+  })();
+</script>
+</body>
+</html>
